@@ -1,12 +1,4 @@
-#Desafio banco: implementar 3 operações : deposito, saque e extrato.
-#Todos os depositos devem ser armazenados em uma variavel e exibidos na operaçao de extrato
-#OBS PARA DEPOSITO: todos os valores precisam ser positivos e inteiros
-#O sistema deve permitir realizar 3 saques diarios com limite maximo de 500 reais 
-#Caso o usuario nao tenha saldo na conta, exibir uma mensagem informando que nao sera possivel fazer o saque
-#Todos os saques devem ser armazenados em uma variavel e exibidos na operação de extrato
-#A operaçao de extrato deve listar todos os depositos  e saques realizados na conta.
-#No final da conta deve ser exibido o saldo atual da conta
-#Os valores devem ser exibidos assim: R$ xxx.xx
+
 saldo = 0
 limite = 500
 numero_saques = 0
