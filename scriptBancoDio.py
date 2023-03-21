@@ -18,13 +18,13 @@ while True:
   acao = int(input(menu))
   if acao == 1:
     print("Digite o valor que deseja depositar:")
-    valor = int(input())
+    valor = float(input())
     if valor>0:
       saldo += valor
-      extrato+(f"Sua conta recebeu um depósito de R$ {valor}.00\n")
+      extrato+=(f"Sua conta recebeu um depósito de R$ {valor:.2f}\n")
       recado = f'''
               Sua conta recebeu um depósito de R$ {valor}.00
-              Seu saldo é de R$ {saldo}.00
+              Seu saldo é de R$ {saldo:.2f}
               '''
       print(recado)
 
@@ -33,7 +33,7 @@ while True:
        print("Limite de 3 saques diários atingido. Não é possível realizar a operação.")
     else:
       print("Informe o valor que deseja sacar:")
-      saque = int(input())
+      saque = float(input())
 
       if saque > 500:
         print("Não é possível realizar a operação! O limite máximo para saque é R$ 500.00")
@@ -43,13 +43,16 @@ while True:
         else : 
           saldo -= saque
           numero_saques +=1
-          extrato+(f"Foi realizado um saque de R${saque}.00\n")
-          print(f"Saque de R${saque}.00 realizado com sucesso")
+          extrato+=(f"Foi realizado um saque de R${saque:.2f}\n")
+          print(f"Saque de R${saque:.2} realizado com sucesso")
 
 
   elif acao == 3:
-    texto = extrato+(f"O saldo atual é de R${saldo}.00\n")
-    print(texto)
+    print("\n ============== extrato =================")
+    print("Não foi realizado qualquer ação na conta." if not extrato else extrato)
+    print(f"\n Saldo: R$ {saldo:.2f}")
+    print("===========================================")
+   
 
 
   elif acao == 4:
